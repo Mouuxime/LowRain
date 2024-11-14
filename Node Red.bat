@@ -38,7 +38,7 @@ node-red > NUL
 
 :choice2
 cls
-start http://127.0.0.1:1880/#flow/22786a49556f0f3f
+start http://127.0.0.1:1880/#flow/22786a49556f0f3f &::Replace your own link here
 echo Node Red launched !
 node-red > NUL
 
