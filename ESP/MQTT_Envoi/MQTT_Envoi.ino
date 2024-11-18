@@ -50,3 +50,16 @@ void setup() {
 void loop() {
   client.loop();
 }
+
+Client.subscribe("esp32/input");
+Client.setCallback(callback);
+
+void callback(char* topic, byte* message, unsigned int length) {
+  Serial.print("Message received on topic: ");
+  Serial.println(topic);
+  Serial.print("Message: ");
+  for (int i = 0; i < length; i++) {
+    Serial.print((char)message[i]);
+  }
+  Serial.println();
+}
